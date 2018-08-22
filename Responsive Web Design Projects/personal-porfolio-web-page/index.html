@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Personal Portfolio - Evandro Gayer Gomes</title>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <style>
+        html,
+        body {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 8vh;
+            background-color: #000;
+            color: white;
+            width: 100%;
+            font-size: 1.4em;
+            z-index: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            float: right;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        @media(max-width: 450px) {
+            header {
+                height: unset;
+                font-size: 1.2em;
+            }
+
+            nav ul {
+                float: left;
+                display: flex;
+                justify-content: space-between;
+                width: 80vw;
+            }
+
+            nav ul li {
+                display: unset;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        #welcome-section {
+            position: relative;
+            padding-top: 46vh;
+            min-height: 54vh;
+            color: #000;
+            text-shadow: 2px 2px #ccc;
+        }
+
+        #welcome-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100vh;
+            opacity: 0.2;
+            background-image: url('https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg');
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+
+        #hello-text::before {
+            content: "<";
+        }
+
+        #hello-text::after {
+            content: "/>";
+        }
+
+        #hello-text::after,
+        #hello-text::before {
+            color: #7D2727;
+            padding: 20px;
+            -webkit-animation-name: opacity;
+            -webkit-animation-duration: 2s;
+            -webkit-animation-iteration-count: infinite;
+            animation-name: opacity;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes opacity {
+            0%,
+            100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        #projects {
+            margin-bottom: 40px;
+        }
+
+        #projects-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .project-tile {
+            width: 30%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+        }
+
+        @media(max-width: 1024px) {
+            .project-tile {
+                width: 45%;
+                margin-bottom: 40px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            .project-tile {
+                width: 100%;
+                margin: 0 20px 40px 20px;
+            }
+        }
+
+        .project-tile:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .project-tile img {
+            width: 100%;
+            object-fit: contain;
+        }
+
+        .project-tile a {
+            text-decoration: none;
+            color: #000;
+            cursor: pointer;
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        #contact {
+            background-color: #e0ebe8;
+            height: 100%;
+            position: relative;
+        }
+
+        #contact h2 {
+            padding-top: 40px;
+        }
+
+        #contact-links {
+            list-style-type: none;
+        }
+
+        #contact-links li {
+            display: inline;
+            margin: 0 20px 0 20px;
+        }
+
+        @media(max-width: 500px) {
+            #contact-links li {
+                display: block;
+                margin-bottom: 20px;
+            }
+        }
+
+        #contact-links a {
+            text-decoration: none;
+        }
+
+        #contact-links img {
+            width: 100px;
+        }
+
+        footer {
+            position: absolute;
+            width: 100%;
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <a href="#welcome-section">About</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome-section">
+            <h1 id="hello-text">Hi! I'm Evandro, a web delevoper
+                </Hi>
+            </h1>
+        </section>
+
+        <section id="projects">
+            <h2>Here are some of my projects</h2>
+            <div id="projects-cards">
+
+                <div class="project-tile">
+                    <a href="https://github.com/evgomes/jwt-api" target="_blank">
+                        <img src="https://cdn-images-1.medium.com/max/800/1*FUq-dxbJGhp1Q2GhX2tG6Q.jpeg" alt="Project">
+                        <div class="container">
+                            <h4>JWT API</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-tile">
+                    <a href="https://github.com/evgomes/organic-shop" target="_blank">
+                        <img src="https://static.pexels.com/photos/416607/pexels-photo-416607.jpeg" alt="Project">
+                        <div class="container">
+                            <h4>Organic Shop</h4>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="project-tile">
+                    <a href="https://github.com/evgomes/csharp-designpatterns" target="_blank">
+                        <img src="https://www.maxpixel.net/static/photo/1x/Code-Data-Programming-Code-Computer-Programming-944504.jpg" alt="Project">
+                        <div class="container">
+                            <h4>Design Patterns Tutorial</h4>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Let's work together</h2>
+            <ul id="contact-links">
+                <li>
+                    <a id="profile-link" target="_blank" href="https://github.com/evgomes">
+                        <img src="https://avatars0.githubusercontent.com/u/9919?s=280&v=4" alt="Github">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://www.linkedin.com/in/evandro-gayer-gomes-627025a3">
+                        <img src="http://www.aaa-scientists.com/LinkedInLogo.png" alt="Linkedin">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://medium.com/@evandro.ggomes">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/2000px-Medium_logo_Monogram.svg.png"
+                            alt="Medium">
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>* This is just a fake portifolio</strong>, created for study purposes (despite the projects and contact
+            links are real).</p>
+        <p>© Evandro Gayer Gomes</p>
+    </footer>
+
+</body>
+
+</html>

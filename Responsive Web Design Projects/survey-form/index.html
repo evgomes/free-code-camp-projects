@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Evaluate our Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet"> 
+    <style>
+        body {
+            background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+            color: var(--text-color);
+            text-align: center;
+            font-family: 'Merriweather Sans', sans-serif;
+            font-size: 14px;
+            line-height: 1.4em;
+        }
+
+        header {
+            color: #fff;
+        }
+
+        header h1 {
+            font-size: 32px;
+            line-height: 0.4em;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number],
+        select {
+            line-height: 1.6em;
+            width: 60%;
+        }
+
+        input[type=submit] {
+            width: 8em;
+            padding: 0.4em;
+            border: 0;
+            background-color: #3989d8;
+            color: white;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type=submit]:hover {
+            background-color: #1e5799;
+            box-shadow: #3989d8 1px 1px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .required {
+            color: red;
+        }
+
+        form {
+            border: 0px solid;
+            border-radius: 5px;
+            background-color: #fff;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        .row {
+            position: relative;
+            width: 100%;
+            display: inline-block;
+        }
+
+        .col {
+            display: inline-block;
+            padding: 0.8em 1em;
+        }
+
+        .left {
+            text-align: right;
+            width: 45%;
+        }
+
+        .right {
+            text-align: left;
+            width: 45%;
+        }
+
+        @media (max-width: 690px) {
+            body {
+                word-wrap: break-word;
+            }
+
+            header h1 {
+                line-height: 0.9em;
+            }
+
+            .col {
+                display: block;
+                padding: 0.4em;
+            }
+
+            .left,
+            .right {
+                text-align: left;
+                width: 95%;
+            }
+
+            input[type=text],
+            input[type=email],
+            input[type=number],
+            select {
+                width: 100%;
+            }
+        }
+
+        ul {
+            display: inline;
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 id="title">Evaluate our Platform</h1>
+        <p id="description">
+            Help us understand which parts of our platform are good and which ones need improvement
+        </p>
+    </header>
+
+    <main>
+        <form id="survey-form">
+            <div class="row">
+                <div class="col left">
+                    <label id="name-label" for="name">
+                        <span class="required">*</span> Name:
+                    </label>
+                </div>
+                <div class="col right">
+                    <input id="name" type="text" placeholder="Enter your name" required autofocus>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <label id="email-label" for="email">
+                        <span class="required">*</span> Email:
+                    </label>
+                </div>
+                <div class="col right">
+                    <input id="email" type="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <label id="number-label" for="number">
+                        <span class="required">*</span> Age:
+                    </label>
+                </div>
+                <div class="col right">
+                    <input id="number" type="number" placeholder="Enter your age" required min="0" max="100">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <label id="platform-use-label" for="platform-use">
+                        <span class="required">*</span> What do you use FictionalOpenPlatform for?
+                    </label>
+                </div>
+                <div class="col right">
+                    <select id="dropdown" name="platform-use" required>
+                        <option value="0">Work</option>
+                        <option value="1">Personal projects</option>
+                        <option value="2">Just studying</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <label>
+                        <span class="required">*</span> How likely is that you would recommend FictionalOpenPlatform to a friend?
+                    </label>
+                </div>
+                <div class="col right">
+                    <ul>
+                        <li>
+                            <label>
+                                <input name="recomendation" type="radio" value="0" checked> Definitely
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="recomendation" type="radio" value="1"> Maybe
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="recomendation" type="radio" value="2"> Not sure
+
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="recomendation" type="radio" value="3"> I would not recommend it
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <label>
+                        <span class="required">*</span> Which aspects of the platform do you like the most?
+                    </label>
+                </div>
+                <div class="col right">
+                    <ul>
+                        <li>
+                            <label>
+                                <input name="aspects" value="0" type="checkbox"></input>
+                                Usability
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="aspects" value="1" type="checkbox"></input>
+                                Integrations with other platforms
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="aspects" value="2" type="checkbox"></input>
+                                Support
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="aspects" value="3" type="checkbox"></input>
+                                Community Help
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input name="aspects" value="4" type="checkbox"></input>
+                                Visual
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col left">
+                    <label for="suggestion">
+                        Do you have suggestions on how to improve FictionalOpenPlatform?
+                    </label>
+                </div>
+                <div class="col right">
+                    <textarea id="suggestion" name="suggestion" cols="30" rows="10" placeholder="Enter your suggestion here..."></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input id="submit" type="submit" value="Send">
+                </div>
+            </div>
+        </form>
+    </main>
+
+</body>
+
+</html>

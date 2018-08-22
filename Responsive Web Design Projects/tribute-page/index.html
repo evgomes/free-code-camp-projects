@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alberto Santos-Dumont</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        :root {
+            --constrast-color: #ff5252;
+            --borders-background-color: #eee;
+        }
+
+        hmtl,
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            line-height: 0.8em;
+        }
+
+        @media (max-width: 405px) {
+            header {
+                line-height: 1.2em;
+            }
+        }
+
+        header h1 {
+            font-size: 1.9em;
+            font-weight: bold;
+            color: var(--constrast-color);
+        }
+
+        main {
+            text-align: justify;
+        }
+
+        main a {
+            color: var(--constrast-color);
+            text-decoration: none;
+        }
+
+        main p {
+            margin-top: 1.2em;
+        }
+
+        figure img {
+            display: block;
+            padding: .25rem;
+            border: 1px solid var(--borders-background-color);
+            border-radius: .25rem;
+            max-width: 100%;
+            height: auto;
+            margin: auto;
+        }
+
+        figcaption {
+            margin-top: 0.25rem;
+            font-size: 0.8em;
+            text-align: center;
+        }
+
+        .divider {
+            border-bottom: 1px solid var(--borders-background-color);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="divider">
+        <h1 id="title">Alberto Santos-Dumont</h1>
+        <p>Brazilian inventor and aviation pioneer</p>
+    </header>
+
+    <main id="main">
+
+        <div id="img-div">
+            <figure>
+                <img id="image" 
+                     src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Santos-Dumont_le_12_novembre_1906%2C_sur_son_14-bis_%28premier_record_du_monde_officiel_de_vitesse%29.jpg"
+                     alt="Alberto Santos-Dumont November 12, 1906, on his 14-bis (first official world speed record). Author: La Vie au Grand Air, November 17, 1906.">
+                <figcaption id="img-caption">
+                    Alberto Santos-Dumont November 12, 1906, on his 14-bis (first official world speed record). 
+                    Author: <i>La Vie au Grand Air</i>
+                </figcaption>
+            </figure>
+        </div>
+
+        <div id="tribute-info">
+            <p>
+                <strong>Alberto Santos-Dumont</strong>,
+                <time datetime="1873-07-20">20 July 1873</time> –
+                <time datetime="1932-07-23">23 July 1932</time>, usually referred to as simply
+                <strong>Santos-Dumont</strong>) was a Brazilian inventor and aviation pioneer, one of the very few people to have
+                contributed significantly to the development of both lighter-than-air and heavier-than-air aircraft.</p>
+
+            <p>The heir of a wealthy family of coffee producers, Santos-Dumont dedicated himself to aeronautical study and experimentation
+                in Paris, where he spent most of his adult life. In his early career he designed, built, and flew hot air
+                balloons and early dirigibles, culminating in his winning the
+                <a href="https://en.wikipedia.org/wiki/Deutsch_de_la_Meurthe_prize" target="_blank">Deutsch de la Meurthe</a> prize on 19 October 1901 for a flight that rounded the Eiffel Tower. He then turned
+                to heavier-than-air machines, and on
+                <time datetime="1906-10-23">23 October 1906
+                </time> his 14-bis made the first powered heavier-than-air flight in Europe to be certified by the Aéro-Club
+                de France and the Fédération Aéronautique Internationale. His conviction that aviation would usher in an
+                era of worldwide peace and prosperity led him to freely publish his designs and forego patenting his various
+                innovations.
+            </p>
+
+            <p>Santos-Dumont is a national hero in Brazil, where it is popularly held that he preceded the Wright brothers in
+                demonstrating a practical airplane. Countless roads, plazas, schools, monuments, and airports there are dedicated
+                to him, and his name is inscribed on the
+                <a href="https://en.wikipedia.org/wiki/Tancredo_Neves_Pantheon_of_the_Fatherland_and_Freedom" target="_blank">Tancredo Neves Pantheon of the Fatherland and Freedom</a>. He was a member of the
+                <a href="https://en.wikipedia.org/wiki/Brazilian_Academy_of_Letters" target="_blank">Brazilian Academy of Letters</a> from 1931 until his suicide in 1932.</p>
+
+            <p>To learn more about him, you should read the full text on his
+                <a id="tribute-link" href="https://en.wikipedia.org/wiki/Alberto_Santos-Dumont" target="_blank">Wikipedia entry</a>.</p>
+        </div>
+    </main>
+</body>
+
+</html>
